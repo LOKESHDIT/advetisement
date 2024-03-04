@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <link rel="stylesheet" href="./style.css">   
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advertisement Banner</title>
+<style>
+    #banner {
+        
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        
+    }
+    .banner-img {
+        width: 100%;
+        height: auto;
+        display: none;
+    }
+</style>
+</head>
+<body>
+<div id="banner">
+    <img class="banner-img" src="./download (3).jfif" alt="image">
+    <img class="banner-img" src="./download (4).jfif" alt="Image 2">
+    <img class="banner-img" src="./download (5).jfif" alt="Image 5">
+    <img class="banner-img" src="./download (6).jfif" alt="Image 2">
+</div>
+
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var index = 0;
+        var images = document.querySelectorAll(".banner-img");
+        
+        setInterval(function() {
+            images[index].style.display = "none";
+            index = (index + 1) % images.length;
+            images[index].style.display = "block";
+        }, 10000); // Change image every 10 seconds (10000 milliseconds)
+    });
+</script>
+</body>
+</html>
+
